@@ -3,7 +3,7 @@ Serial myPort;
 String val;
 
 void setup(){
- String portName = Serial.list()[10];
+ String portName = Serial.list()[0];
  myPort = new Serial(this, portName, 115200);
  //size(1920, 1080);
  //background(0);
