@@ -1,10 +1,8 @@
 radio.onReceivedNumber(function (receivedNumber) {
     inNum = receivedNumber
-    serial.writeLine("" + (inNum))
 })
 radio.onReceivedString(function (receivedString) {
     inString = receivedString
-    serial.writeLine(inString)
 })
 let packet = ""
 let inString = ""
@@ -14,7 +12,7 @@ serial.redirectToUSB()
 serial.setTxBufferSize(64)
 serial.setRxBufferSize(64)
 basic.forever(function () {
-    /*let packArr: string[] = []
+    let packArr: string[] = []
     if (inNum < 6) {
         packArr[inNum] = inString
     }
@@ -24,5 +22,5 @@ basic.forever(function () {
     }
     if (inNum == 6) {
         serial.writeLine("Invalid Packet")
-    }*/
+    }
 })
